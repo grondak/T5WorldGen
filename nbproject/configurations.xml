@@ -30,6 +30,7 @@
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
+      <itemPath>The Beyond.txt</itemPath>
       <itemPath>trojan reach.txt</itemPath>
     </logicalFolder>
   </logicalFolder>

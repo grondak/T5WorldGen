@@ -27,6 +27,7 @@ Sector *readASector(const char *sectorName, const char *sectorFileName) {
 int main(int argc, char** argv) {
     
     Sector *workingSector = readASector("Trojan Reach", "trojan reach.txt");
+    //Sector *workingSector = readASector("The Beyond", "The Beyond.txt");
     return 0;
 }
 

@@ -136,7 +136,7 @@ string System::toString(void)
     if (importanceNote.length() > 0)
         importanceNote = "(" + importanceNote + ")";
     
-    return (hasTradeClassification("Ic") ? "ICE-CAPPED! " : "" )+ getSystemName() + "," + getLocation() + "," + getUWP() +
+    return  getSystemName() + "," + getLocation() + "," + getUWP() +
             + "(" + getStarport() + "/" + getSize() + "/" + getAtmosphere() + "/" + getHydrographics() + "/" +
             getGovernment() + "/" + getLawLevel() + "/" + getTechLevel() + ")"
             "," + getBase() + "," + getRemarks() + "," + getZone() + 
@@ -308,11 +308,12 @@ string System::trimmer(string givenString)
 
 string System::itoh(int givenValue)
 {
-    string s;
-    stringstream out;
-
-    out << std::hex << std::uppercase << givenValue;
-    return out.str();
+    char value = 0;
+    if (givenValue < 10) value = givenValue + '0';
+    else
+        value = givenValue - 10 + 'A';
+    
+    return string("") + value;
 }
 
 string System::itoa(int givenValue)
